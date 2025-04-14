@@ -110,3 +110,13 @@ function otfAtt= NotchFilters( imgSize,micronsPerPixel,lambda,NA,kx,ky )
     Mask=double(rad<1.0*(cutoff/cyclesPerMicron+1));
     otfAtt=otfAtt.*Mask;
 end
+
+function file=readTIF(filename)   
+    sizef=size(imfinfo(filename),1);
+    file = imread(filename, 1); 
+    for idx = 2 : sizef
+        tiffTemp = imread(filename, idx);
+        file = cat(3 , file, tiffTemp);
+    end 
+    file=double(file);
+end
