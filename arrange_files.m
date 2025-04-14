@@ -26,3 +26,13 @@ for i=1:9
     fs1=[fs0,fs1];
     writeTIF(fs1,a);
 end
+
+function file=readTIF(filename)   
+    sizef=size(imfinfo(filename),1);
+    file = imread(filename, 1); 
+    for idx = 2 : sizef
+        tiffTemp = imread(filename, idx);
+        file = cat(3 , file, tiffTemp);
+    end 
+    file=double(file);
+end
