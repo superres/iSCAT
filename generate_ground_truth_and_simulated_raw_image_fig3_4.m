@@ -270,3 +270,10 @@ function file=readTIF(filename)
     end 
     file=double(file);
 end
+function a=getMedian(b)
+    for i=1:size(b,1)
+        for j=1:size(b,2)
+            a(i,j)=median(b(i,j,:));
+        end
+    end
+end
