@@ -261,4 +261,12 @@ function ssims=getCurve(a0,a1,a2,p,r0,idx)
     ssims(1)=ssim(a1(y,x,1),a0(y,x));
     ssims(2)=ssim(a2(y,x,1),a0(y,x));
 end
-
+function file=readTIF(filename)   
+    sizef=size(imfinfo(filename),1);
+    file = imread(filename, 1); 
+    for idx = 2 : sizef
+        tiffTemp = imread(filename, idx);
+        file = cat(3 , file, tiffTemp);
+    end 
+    file=double(file);
+end
