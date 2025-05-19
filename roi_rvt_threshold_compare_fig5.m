@@ -2,7 +2,7 @@ clc;clear;close all; warning off;
 
 t=[0.06,0.07,0.1];
 pages=1; r=1:25;
-a0=readTIF('E:\data\2024.9.4\4-2\compares.tif');
+a0=readTIF('compares.tif');
 for i=1:3
     pp0{i}=getParticles(a0(:,:,i),r,t(i),15,5,i);
 end
