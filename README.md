@@ -7,4 +7,4 @@ Files and codes under this repository is only for acadamic use, thank you.
 0. Download all files in https://github.com/superres/iSCAT.
 1. RUN arrange_files.m to prepare experimental image stacks.
 2. Run file simulated_single_particle_noise_fft_show_fig2.m, to demonstrate Figure 2 of the manuscript.
-3. Run file generate_ground_truth_and_simulated_raw_image_fig3_4.m, to demonstrate Figure 3 and Figure 4 of the manuscript.
+
